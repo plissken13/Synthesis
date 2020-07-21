@@ -56,6 +56,8 @@ namespace Synthesis
 
             app.UseAuthorization();
 
+            app.UseStaticFiles();
+
             app.UseEndpoints(endpoints => { endpoints.MapDefaultControllerRoute(); });
         }
     }
