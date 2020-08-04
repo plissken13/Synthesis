@@ -44,6 +44,8 @@ namespace Synthesis.Controllers
                     return RedirectToAction("Index", "Home");
                 }
             }
+            /////////////////////////////////////////////////////////////////////////////////////////////
+            /// ERROR IF USER==NULL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
             return RedirectToAction("Index", "Home");
         }

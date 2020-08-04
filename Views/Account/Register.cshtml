@@ -1,20 +1,24 @@
-﻿@model Synthesis.Models.ViewModels.RegisterViewModel
+﻿@using Synthesis.Controllers
+@using Synthesis.Models.ViewModels
+@model Synthesis.Models.ViewModels.RegisterViewModel
 @{ Layout = "~/Views/Shared/_Layout.cshtml"; }
 <h2>Register</h2>
-<form method="post" asp-controller="Account" asp-action="Register">
-    <div asp-validation-summary="ModelOnly"></div>
-    <div>
-        <label asp-for="Email"></label><br />
-        @Html.EditorFor(model => model.Email)
-        <span asp-validation-for="Email"></span>
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new {role = "form"}))
+{
+    @Html.Label("Email")
+    <br/>
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.Email, new {@class = "form-control"})
     </div>
-    <div>
-        <label asp-for="Password"></label><br />
-        @Html.EditorFor(model => model.Password)
+    <br/>
+    <br/>
+    @Html.Label("Password")
+    <br/>
+    <div class="col-md-10">
 
-        <span asp-validation-for="Password"></span>
+        @Html.PasswordFor(m => m.Password, new {@class = "form-control"})
     </div>
-    <div>
-        <input type="submit" value="Register" />
-    </div>
-</form>
+    <br/>
+    <br/>
+    <input type="submit" value="Register"/>
+}

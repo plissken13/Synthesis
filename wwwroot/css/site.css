@@ -18,11 +18,22 @@ a {
   border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.navigation-link,
+.navigation-link:active,
+.navigation-link:visited,
+.navigation-link:link {
+    color: white;
 }
+
+.navigation-link:hover {
+    color: darkcyan;
+}
+
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        color: #fff;
+        background-color: #1b6ec2;
+        border-color: #1861ac;
+    }
 
 /* Sticky footer styles
 -------------------------------------------------- */
